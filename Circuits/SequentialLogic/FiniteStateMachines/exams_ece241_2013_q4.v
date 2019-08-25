@@ -63,6 +63,7 @@ module top_module (
             end
             BL1_DOWN: next_state = s[1]? BTW12 : BL1_DOWN;
             IDLE_STS: next_state = s[1]? BTW12 : IDLE_STS;
+            default: next_state = IDLE_STS;
         endcase
     end
     

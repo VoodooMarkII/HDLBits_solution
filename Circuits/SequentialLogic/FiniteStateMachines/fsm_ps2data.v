@@ -22,6 +22,7 @@ module top_module(
             RCV3: next_state = RCV_DONE;
             RCV_DONE: next_state = in[3]? RCV2 : RCV_ERR;
             RCV_ERR: next_state = in[3]? RCV2 : RCV_ERR;
+            default: next_state = RCV1;
         endcase
     end
     

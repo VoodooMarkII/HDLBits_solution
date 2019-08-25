@@ -16,6 +16,7 @@ module top_module(
         case (state)
             LEFT: next_state = bump_left? RIGHT : LEFT;
             RIGHT: next_state = bump_right? LEFT : RIGHT;
+            default: next_state = LEFT;
         endcase
     end
 
